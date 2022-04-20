@@ -32,22 +32,17 @@ public class Main {
         System.out.println("Number of permits: " + sem.availablePermits());*/
 
     }
-    public static int x = 0;
+    //public static int x = 0;//uncomment to create global variable to use in classes
 }
 
 class Restroom1 implements Runnable{
-
     public void run(){
         for (int i = 0; i < 5; i++) {
             System.out.println("Restroom 1 in use");
             try { Thread.sleep(2125); } catch (InterruptedException e) { e.printStackTrace(); }
             System.out.println("Restroom 2 available");
-            Main.x-=1;
-            System.out.println(Main.x);
         }
-
     }
-
 }
 
 class Restroom2 implements Runnable{
@@ -56,8 +51,6 @@ class Restroom2 implements Runnable{
             System.out.println("Restroom 2 in use");
             try { Thread.sleep(3500); } catch (InterruptedException e) { e.printStackTrace(); }
             System.out.println("Restroom 2 available");
-            Main.x+=1;
-            System.out.println(Main.x);
         }
     }
 }
@@ -67,8 +60,6 @@ class Restroom3 implements Runnable{
             System.out.println("Restroom 3 in use");
             try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
             System.out.println("Restroom 3 available");
-            Main.x+=1;
-            System.out.println(Main.x);
         }
     }
 }
@@ -78,8 +69,6 @@ class Restroom4 implements Runnable{
             System.out.println("Restroom 4 in use");
             try { Thread.sleep(2250); } catch (InterruptedException e) { e.printStackTrace(); }
             System.out.println("Restroom 4 available");
-            Main.x+=1;
-            System.out.println(Main.x);
         }
     }
 }
